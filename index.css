@@ -34,11 +34,13 @@
     --line-height-normal: 1.7;
     --line-height-small: 1.2;
 
-    --black: #000;
-    --pink: #ff3258;
-    --white: #f0e9f2;
-    --white-1: #e5e5e6da;
-
+    --background: #1b1a17;
+    --accent: #ff7b00;
+    --accent-light: #ffd56b;
+    --text: #f2f2f2;
+    --text-muted: #b0a999;
+    --card-bg: #29261f;
+    
 
     --container-max-width: 1180px;
     --container-normal-width: 800px;
@@ -70,9 +72,9 @@ body {
     font-size: var(--font-size-small);
     font-family: var(--font-stack);
     font-weight: 400;
-    color: var(--white-1);
+    color: var(--background);
     line-height: var(--line-height-normal);
-    background: var(--black);
+    background: var(--background);
     overflow-x: hidden;
 }
 
@@ -125,7 +127,7 @@ h3 {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     line-height: var(--line-height-small);
-    color: var(--white);
+    color: var(--accent);
 }
 
 .heading-primary {
@@ -188,7 +190,7 @@ p {
 /* --------------------------------------- */
 
 a {
-    color: var(--white);
+    color: var(--card-bg);
     font-weight: 400;
     font-family: 'Jost', sans-serif;
     transition: all .2s;
@@ -308,7 +310,7 @@ body:not(.user-is-tabbing) a:focus {
     align-items: center;
     height: 5.5rem;
     width: 5.5rem;
-    background-color: var(--pink);
+    background-color: var(--card-bg);
     border-radius: 50%;
     z-index: 10;
     visibility: hidden;
@@ -390,13 +392,13 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .nav__link:hover {
-    color: var(--pink);
+    color: var(--accent-light);
 }
 
 .nav__link:hover::after {
     right: 0;
     height: 2px;
-    background: var(--pink);
+    background: var(--accent);
 }
 
 /* --------------------------------------- */
@@ -522,7 +524,7 @@ body:not(.user-is-tabbing) a:focus {
   max-width: 700px;
   margin: 0 auto 4rem auto;
   font-size: 1.6rem;
-  color: #555;
+  color: var(--text);
 }
 
 .skills__grid {
@@ -534,7 +536,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .skills__category {
-  background: #fff;
+  background: --background;
   padding: 2rem 3rem;
   border-radius: 1.5rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -548,7 +550,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .skills__category h3 {
   font-size: 1.8rem;
-  color: #e91e63; /* pink accent */
+  color: --accent; 
   margin-bottom: 1.2rem;
 }
 
@@ -559,7 +561,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .skills__category li {
   font-size: 1.5rem;
-  color: #333;
+  color: #--accent-light;
   margin: 0.8rem 0;
 }
 
