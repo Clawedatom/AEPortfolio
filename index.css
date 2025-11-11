@@ -212,7 +212,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .link:hover {
-    color: var(--pink);
+    color: var(--);
 }
 
 .btn {
@@ -221,7 +221,7 @@ body:not(.user-is-tabbing) a:focus {
     padding: 1rem 4.2rem;
     text-decoration: none;
     color: inherit;
-    border: 1px solid  var(--pink);
+    border: 1px solid  var(--card-bg);
     font-weight: 400;
 }
 
@@ -236,7 +236,7 @@ body:not(.user-is-tabbing) a:focus {
     top: 0;
     left: 0;
     right: 100%;
-    background: var(--white);
+    background: var(--card-bg);
     height: 100%;
     z-index: -1;
     transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
@@ -245,20 +245,20 @@ body:not(.user-is-tabbing) a:focus {
 .btn:hover::after,
 .btn:focus::after {
     right: 0;
-    background: var(--pink);
+    background: var(--card-bg);
 }
 
-.btn--pink {
-    background: var(--pink);
+.btn--card-bg {
+    background: var(--card-bg);
     transition: all 0.2s;
 }
 
-.btn--pink::after {
+.btn--card-bg::after {
     display: none;
 }
 
-.btn--pink:hover,
-.btn--pink:focus {
+.btn--card-bg:hover,
+.btn--card-bg:focus {
     background: transparent;
 }
 
@@ -268,7 +268,7 @@ body:not(.user-is-tabbing) a:focus {
     padding: .6rem;
     color: inherit;
     text-decoration: none;
-    border-bottom: 1px solid var(--pink);
+    border-bottom: 1px solid var(--card-bg);
 }
 
 .link__text::after {
@@ -278,7 +278,7 @@ body:not(.user-is-tabbing) a:focus {
     top: 0;
     left: 0;
     right: 100%;
-    background: var(--white);
+    background: var(--text);
     height: 100%;
     z-index: -1;
     transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
@@ -291,7 +291,7 @@ body:not(.user-is-tabbing) a:focus {
 .link__text:hover::after,
 .link__text:focus:after {
     right: 0;
-    background: var(--pink);
+    background: var(--text);
 }
 
 .link__text span {
@@ -387,7 +387,7 @@ body:not(.user-is-tabbing) a:focus {
     right: 100%;
     display: inline-block;
     height: 1rem;
-    background: var(--white);
+    background: var(--accent);
     transition: all 0.25s cubic-bezier(1, 0.68, 0.16, 0.9);
 }
 
