@@ -33,7 +33,28 @@
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="stylesheet" href="index.css" />
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aaron Ebrey",
+    "url": "https://<your-github-username>.github.io/<your-repo>",
+    "sameAs": [
+      "https://www.linkedin.com/in/aaron-ebrey-9bb8b4240/",
+      "https://github.com/Clawedatom",
+      "https://zelldauron.itch.io/"
+    ],
+    "jobTitle": "Game Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Student / Independent"
+    },
+    "knowsAbout": ["Unity","Unreal Engine","C#","C++","Gameplay Programming"]
+  }
+  </script>
+
+  <link rel="stylesheet" href="index.css?v=20251205" />
 </head>
 
 <body>
@@ -73,51 +94,38 @@
         <h2>Overview</h2>
         <div class="work__boxes">
 
-          <!-- Project 1 -->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>My Projects</h3>
-              <p>
-                Here are a few projects I’ve worked on over ~6 years of coding/game development. My main strength is Unity and C# (5+ years). My YouTube channel shows development progress and demos.
-              </p>
-              <ul class="work__list">
-                <li>C++</li>
-                <li>C#</li>
-                <li>Unity</li>
-                <li>Unreal</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://github.com/Clawedatom" target="_blank" rel="noopener noreferrer" class="link__text">
-                  Visit GitHub <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/Clawedatom" title="View Github Profile" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub icon" loading="lazy" />
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/MechanicsProject.png" class="work__image" alt="Mechanics project screenshot" loading="lazy" />
-            </div>
-          </div>
-
-          <!-- Rocket Jumper -->
+          <!-- Project 1: Rocket Jumper -->
           <div class="work__box">
             <div class="work__text">
               <h3>Rocket Jumper</h3>
               <p>
                 Rocket Jumper is a 2D platformer — the first game I fully developed and published.
               </p>
-              <ul class="work__list">
-                <li>Unity2D</li>
-                <li>C#</li>
-                <li>Unity</li>
-              </ul>
+
+              <!-- Short case study -->
+              <div class="case">
+                <p class="muted">Role: Solo dev • Engine: Unity2D • Languages: C# • Time: 4 months</p>
+                <h4>Problem</h4>
+                <p>Create a tight platformer with responsive physics and replayable levels for a portfolio release.</p>
+
+                <h4>Approach</h4>
+                <ul>
+                  <li>Built a responsive character controller (coyote-time, variable jump).</li>
+                  <li>Implemented level progression, pickups, and feedback systems.</li>
+                  <li>Polished audio & small playtests for balancing.</li>
+                </ul>
+
+                <h4>Outcome</h4>
+                <p>Released on Itch; learned release pipeline and iterative polish. <a href="https://zelldauron.itch.io/rocketjumper" target="_blank" rel="noopener noreferrer">Play demo</a></p>
+
+                <p class="muted" style="margin-top:.6rem;">
+                  <a href="https://github.com/Clawedatom/rocketjumper" target="_blank" rel="noopener noreferrer">Source on GitHub</a> •
+                  <a href="/assets/rocketjumper-gif.gif" target="_blank" rel="noopener noreferrer">Short gameplay GIF</a>
+                </p>
+              </div>
 
               <div class="work__links">
-                <a href="https://zelldauron.itch.io/rocketjumper" target="_blank" rel="noopener noreferrer" class="link__text">
-                  Play on Itch.io <span>&rarr;</span>
-                </a>
+                <a href="https://zelldauron.itch.io/rocketjumper" target="_blank" rel="noopener noreferrer" class="link__text">Play on Itch.io <span>&rarr;</span></a>
               </div>
             </div>
             <div class="work__image-box">
@@ -125,54 +133,80 @@
             </div>
           </div>
 
-          <!-- Combo System Project -->
+          <!-- Project 2: Greedy Little Goblin -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Greedy Little Goblin</h3>
+              <p>
+                A heisting game where you play as a goblin stealing from humans with a size-shrinking mechanic.
+              </p>
+
+              <!-- Short case study -->
+              <div class="case">
+                <p class="muted">Role: Co-host & Dev • Engine: Unity3D • Languages: C# • Time: Game Jam</p>
+                <h4>Problem</h4>
+                <p>Create a compact, fun jam game that showcases unique mechanics and is simple to play.</p>
+
+                <h4>Approach</h4>
+                <ul>
+                  <li>Designed shrink/growth mechanic and quick level goals.</li>
+                  <li>Coordinated art and audio assets to meet the jam deadline.</li>
+                  <li>Rapid prototyping and iterative playtesting at the jam.</li>
+                </ul>
+
+                <h4>Outcome</h4>
+                <p>Completed for the jam and published on Itch. Great practice in rapid design and scope control. <a href="https://zelldauron.itch.io/greedy-little-goblins" target="_blank" rel="noopener noreferrer">Play it</a></p>
+
+                <p class="muted" style="margin-top:.6rem;">
+                  <a href="https://github.com/Clawedatom/" target="_blank" rel="noopener noreferrer">GitHub profile</a>
+                </p>
+              </div>
+
+              <div class="work__links">
+                <a href="https://zelldauron.itch.io/greedy-little-goblins" target="_blank" rel="noopener noreferrer" class="link__text">Visit Itch Page <span>&rarr;</span></a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/GLG_JamImage.png" class="work__image" alt="Greedy Little Goblin jam screenshot" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Project 3: Combo System (short card) -->
           <div class="work__box">
             <div class="work__text">
               <h3>Combo System Project</h3>
-              <p>
-                Built a combat combo system to learn Unreal Engine and character animation integration.
-              </p>
+              <p>Built a combat combo system to learn Unreal Engine integration with character animation.</p>
               <ul class="work__list">
                 <li>Unreal Engine</li>
                 <li>C++</li>
                 <li>Blueprints</li>
                 <li>Animation</li>
               </ul>
-
               <div class="work__links">
                 <a href="#" class="link__text" target="_blank" rel="noopener noreferrer">Visit Site <span>&rarr;</span></a>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Combo system source">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub" loading="lazy" />
-                </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./images/MechanicsProject.png" class="work__image" alt="Combo system project screenshot" loading="lazy" />
+              <img src="./images/MechanicsProject.png" class="work__image" alt="Mechanics project screenshot" loading="lazy" />
             </div>
           </div>
 
-          <!-- Greedy Little Goblin -->
+          <!-- Project 4: Misc Projects card -->
           <div class="work__box">
             <div class="work__text">
-              <h3>Greedy Little Goblin</h3>
-              <p>
-                A heisting game where you play as a goblin stealing from humans with a size-shrinking mechanic. Developed for a game jam I co-hosted.
-              </p>
+              <h3>Other Projects & Experiments</h3>
+              <p>Small prototypes and scripts exploring gameplay ideas and tools.</p>
               <ul class="work__list">
-                <li>Unity</li>
-                <li>C#</li>
-                <li>Game Jam</li>
-                <li>Unity3D</li>
+                <li>Prototype systems</li>
+                <li>Gameplay utilities</li>
+                <li>Devlogs</li>
               </ul>
-
               <div class="work__links">
-                <a href="https://zelldauron.itch.io/greedy-little-goblins" target="_blank" rel="noopener noreferrer" class="link__text">
-                  Visit Itch Page <span>&rarr;</span>
-                </a>
+                <a href="https://github.com/Clawedatom" target="_blank" rel="noopener noreferrer" class="link__text">Visit GitHub <span>&rarr;</span></a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./images/GLG_JamImage.png" class="work__image" alt="Greedy Little Goblin jam screenshot" loading="lazy" />
+              <img src="./images/MechanicsProject.png" class="work__image" alt="Misc project screenshot" loading="lazy" />
             </div>
           </div>
 
@@ -184,10 +218,7 @@
     <section class="skills" id="skills">
       <div class="row">
         <h2>Skills</h2>
-        <p class="skills__intro">
-          Here are some of the tools, engines, and languages I use to build games and gameplay systems.
-        </p>
-
+        <p class="skills__intro">Here are some of the tools, engines, and languages I use to build games and gameplay systems.</p>
         <div class="skills__grid">
           <div class="skills__category">
             <h3>🎮 Engines</h3>
@@ -197,7 +228,6 @@
               <li>Roblox Studio</li>
             </ul>
           </div>
-
           <div class="skills__category">
             <h3>💻 Languages</h3>
             <ul>
@@ -207,7 +237,6 @@
               <li>Java</li>
             </ul>
           </div>
-
           <div class="skills__category">
             <h3>⚙️ Tools</h3>
             <ul>
@@ -217,7 +246,6 @@
               <li>Trello</li>
             </ul>
           </div>
-
           <div class="skills__category">
             <h3>🧠 Disciplines</h3>
             <ul>
@@ -237,12 +265,13 @@
         <h2>About Me</h2>
         <div class="about__content">
           <div class="about__text">
-            <p>
-              I am a 21-year-old undergraduate studying Game Development at MMU. I have a passion for developing games — especially 3D. I also enjoy fitness, with 5 years at the gym, and ~6 years of personal projects and development experience.
-            </p>
+            <p>I am a 21-year-old undergraduate studying Game Development at MMU. I have a passion for developing games — especially 3D. I also enjoy fitness, with 5 years at the gym, and ~6 years of personal projects and development experience.</p>
 
-            <!-- Replace the href with your actual CV file -->
-            <a href="/assets/AaronEbrey_CV.pdf" class="btn" download>My CV</a>
+            <!-- CV CTA -->
+            <div class="cv-cta" style="margin-top:1rem;">
+              <a href="/assets/AaronEbrey_CV.pdf" download class="btn btn--pink">Download CV (PDF)</a>
+              <span class="muted" style="margin-left:0.8rem;">• Last updated: 2025-12-05</span>
+            </div>
           </div>
 
           <div class="about__photo-container">
@@ -258,10 +287,36 @@
     <div class="row">
       <h2>Get in Touch</h2>
       <div class="contact__info">
-        <p>
-          If you're looking for a passionate developer with an interest in all things game dev, contact me:
+        <p>If you're looking for a passionate developer with an interest in all things game dev, contact me:</p>
+
+        <!-- Netlify-friendly contact form (honeypot for spam) -->
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" style="max-width:560px;">
+          <input type="hidden" name="form-name" value="contact" />
+          <p style="display:none">
+            <label>Don’t fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <label style="display:block;margin-bottom:.5rem;">
+            Name
+            <input type="text" name="name" required style="width:100%;padding:.6rem;border-radius:8px;border:1px solid rgba(17,24,39,0.06);margin-top:.25rem;">
+          </label>
+
+          <label style="display:block;margin-bottom:.5rem;">
+            Email
+            <input type="email" name="email" required style="width:100%;padding:.6rem;border-radius:8px;border:1px solid rgba(17,24,39,0.06);margin-top:.25rem;">
+          </label>
+
+          <label style="display:block;margin-bottom:.5rem;">
+            Message
+            <textarea name="message" rows="5" required style="width:100%;padding:.6rem;border-radius:8px;border:1px solid rgba(17,24,39,0.06);margin-top:.25rem;"></textarea>
+          </label>
+
+          <button class="btn btn--pink" type="submit">Send</button>
+        </form>
+
+        <p style="margin-top:1rem;">
+          Or email directly: <a href="mailto:aaron.ebrey@gmail.com" class="btn" style="display:inline-block;padding:.35rem .6rem;border-radius:8px;margin-left:.6rem;">aaron.ebrey@gmail.com</a>
         </p>
-        <a href="mailto:aaron.ebrey@gmail.com" class="btn">aaron.ebrey@gmail.com</a>
       </div>
     </div>
   </section>
@@ -287,9 +342,7 @@
         </li>
       </ul>
 
-      <p>
-        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link" target="_blank" rel="noopener noreferrer">Nisar</a>.
-      </p>
+      <p>&copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link" target="_blank" rel="noopener noreferrer">Nisar</a>.</p>
 
       <div class="footer__github-buttons">
         <iframe
@@ -303,7 +356,7 @@
     <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image" loading="lazy" />
   </a>
 
-  <script src="./index.js" defer></script>
+  <script src="index.js" defer></script>
 </body>
 
 </html>

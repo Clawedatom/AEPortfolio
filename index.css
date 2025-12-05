@@ -1,24 +1,18 @@
-/* index.css — Soft Pastel Student Theme
-   Paste this over your existing index.css file.
-   Loads "Inter" from Google Fonts for a modern, readable look.
-*/
-
-/* ---- Fonts ---- */
+/* index.css — Soft Pastel Student Theme (fixed syntax) */
+/* Loads "Inter" from Google Fonts for a modern, readable look. */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
 :root{
-  /* Pastel color palette */
-  --bg: #fbfbfe;            /* page background (very light) */
-  --card: #ffffff;          /* card background */
-  --muted: #99a0b5;         /* muted text */
-  --text: #212631;          /* main text */
-  --accent: #FF7EB6;        /* primary accent (pink pastel) */
-  --accent-2: #8AC6FF;      /* secondary accent (sky pastel) */
-  --accent-3: #FFD68A;      /* tertiary accent (soft yellow) */
+  --bg: #fbfbfe;
+  --card: #ffffff;
+  --muted: #99a0b5;
+  --text: #212631;
+  --accent: #FF7EB6;
+  --accent-2: #8AC6FF;
+  --accent-3: #FFD68A;
   --shadow: rgba(17,24,39,0.06);
   --glass: rgba(255,255,255,0.8);
 
-  /* spacing scale */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space: 1rem;
@@ -27,13 +21,12 @@
   --container: 1100px;
   --radius: 12px;
 
-  /* typography */
   --font-sans: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   --heading-weight: 700;
   --body-weight: 400;
 }
 
-/* ---- Reset / base ---- */
+/* Reset / base */
 *,
 *::before,
 *::after { box-sizing: border-box; }
@@ -54,15 +47,16 @@ html,body{
 a { color: inherit; text-decoration: none; }
 img { max-width:100%; display:block; }
 
-/* ---- Container / Grid ---- */
+/* Container / Grid */
 .row {
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 var(--space);
-  width: calc(100% - 2*var(--space));
+  /* fixed calc syntax */
+  width: calc(100% - (2 * var(--space)));
 }
 
-/* ---- Header / Hero ---- */
+/* Header / Hero */
 .header {
   padding: var(--space-lg) 0;
   background: linear-gradient(180deg, rgba(138,198,255,0.08) 0%, rgba(255,126,182,0.03) 100%);
@@ -90,7 +84,7 @@ img { max-width:100%; display:block; }
   max-width: 48ch;
 }
 
-/* ---- Nav ---- */
+/* Nav */
 .nav {
   display:flex;
   align-items:center;
@@ -121,7 +115,7 @@ img { max-width:100%; display:block; }
   outline: none;
 }
 
-/* ---- Buttons ---- */
+/* Buttons */
 .btn {
   display:inline-block;
   padding: 0.6rem 1rem;
@@ -148,7 +142,7 @@ img { max-width:100%; display:block; }
   box-shadow: 0 8px 30px rgba(255,126,182,0.12);
 }
 
-/* ---- Projects grid ---- */
+/* Projects grid */
 .projects { padding: var(--space-lg) 0; }
 
 .work__boxes {
@@ -168,7 +162,15 @@ img { max-width:100%; display:block; }
   overflow:hidden;
   box-shadow: 0 8px 20px var(--shadow);
   border: 1px solid rgba(17,24,39,0.03);
-  transition: transform 220ms ease, box-shadow 220ms ease;
+  transition: transform 220ms ease, box-shadow 220ms ease, opacity 220ms ease;
+  /* initial state for reveal */
+  transform: translateY(8px);
+  opacity: 0;
+}
+
+.work__box.revealed {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .work__box:hover {
@@ -245,7 +247,7 @@ img { max-width:100%; display:block; }
   display:block;
 }
 
-/* ---- Skills ---- */
+/* Skills */
 .skills {
   padding: var(--space-lg) 0;
 }
@@ -263,7 +265,7 @@ img { max-width:100%; display:block; }
   border: 1px solid rgba(17,24,39,0.03);
 }
 
-/* ---- About ---- */
+/* About */
 .aboutme {
   padding: var(--space-lg) 0;
 }
@@ -282,7 +284,7 @@ img { max-width:100%; display:block; }
   padding: 0.6rem;
 }
 
-/* ---- Contact & Footer ---- */
+/* Contact & Footer */
 .contact {
   padding: var(--space-lg) 0;
   background: linear-gradient(180deg, rgba(255,254,240,0.06), transparent);
@@ -315,11 +317,10 @@ img { max-width:100%; display:block; }
 }
 .back-to-top:hover { transform: translateY(-4px); }
 
-/* ---- Responsive ---- */
-/* Mobile first — single column. At larger widths, change layout. */
+/* Responsive */
 @media (min-width: 720px) {
   .work__boxes {
-    grid-template-columns: 1fr 1fr; /* two columns for projects */
+    grid-template-columns: 1fr 1fr;
   }
   .about__content {
     grid-template-columns: 1fr 360px;
@@ -332,7 +333,7 @@ img { max-width:100%; display:block; }
 
 @media (min-width: 1024px) {
   .work__boxes {
-    grid-template-columns: repeat(3, 1fr); /* three columns on wide screens */
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
   }
   .header {
@@ -340,7 +341,7 @@ img { max-width:100%; display:block; }
   }
 }
 
-/* ---- Accessibility: Focus Styles ---- */
+/* Accessibility: Focus Styles */
 :focus {
   outline: none;
 }
@@ -359,13 +360,13 @@ a:focus, button:focus, .btn:focus, .nav__link:focus {
 .center { text-align:center; }
 .muted { color: var(--muted); font-size:0.95rem; }
 
-/* ---- Print friendly ---- */
+/* Print friendly */
 @media print {
   body { background: white; color: black; }
   .work__image, .about__photo { display:none; }
 }
 
-/* ---- Tiny utilities for student vibe ---- */
+/* Tiny utilities for student vibe */
 .small-tag {
   display:inline-block;
   padding: 0.18rem 0.5rem;
@@ -375,5 +376,3 @@ a:focus, button:focus, .btn:focus, .nav__link:focus {
   border: 1px solid rgba(255,126,182,0.06);
   color: var(--muted);
 }
-
-/* End of index.css */
