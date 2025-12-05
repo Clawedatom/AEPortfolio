@@ -22,73 +22,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 
-  <!-- Put your site title here -->
-  <title>
-    Aaron Ebrey | An aspiring Game Developer from Birmingham, UK
-  </title>
+  <title>Aaron Ebrey | Aspiring Game Developer — Birmingham, UK</title>
+  <meta name="description" content="Aaron Ebrey — a passionate game developer studying Computer Games Development at MMU. Unity, Unreal, C#, C++." />
+  <meta name="keywords" content="Unity, Unreal, C++, C#, Python, Game Development" />
 
-  <meta name="description" content="A passionate game developer, currently in second year at MMU, studying Computer Games Development.">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Unity, Unreal, C++, C#, Python" />
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Aaron Ebrey — Game Developer (Birmingham, UK)" />
+  <meta property="og:description" content="Game developer studying at MMU — Unity, Unreal, C#, C++ — portfolio and projects." />
+  <meta property="og:image" content="./images/preview.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
+  <!-- Skip link for keyboard users -->
+  <a class="skip-link" href="#main" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden"
+    onfocus="this.style.left='1rem';this.style.width='auto';">Skip to content</a>
 
   <!-- ***** Header ***** -->
-
   <header class="header" role="banner" id="top">
     <div class="row">
-      <nav class="nav" role="navigation">
+      <nav class="nav" role="navigation" aria-label="Main navigation">
         <ul class="nav__items">
           <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-          <!-- <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li> -->
-          <li class="nav__item">
-            <a href="#aboutme" class="nav__link">About Me</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
-          </li>
-          <li class="nav__item">
-            <a href="#skills" class="nav__link">Skills</a>
-          </li>
+          <li class="nav__item"><a href="#aboutme" class="nav__link">About Me</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+          <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
         </ul>
       </nav>
     </div>
+
     <div class="header__text-box row">
       <div class="header__text">
         <h1 class="heading-primary">
-          <!-- Replace the following name with your name -->
           <span>Aaron Ebrey</span>
         </h1>
-        <!-- Put a small paragraph about yourself -->
         <p>A Game Developer based in Birmingham, UK.</p>
         <a href="#contact" class="btn btn--pink">Get in touch</a>
       </div>
     </div>
   </header>
 
-  <main role="main">
+  <main role="main" id="main">
 
-
-    
-    <!-- ***** Projects ***** -->
-
+    <!-- ***** Projects / Overview ***** -->
     <section class="projects" id="projects">
       <div class="row">
         <h2>Overview</h2>
         <div class="work__boxes">
 
-          <!-- Each div with the work__box class is a project. -->
-
+          <!-- Project 1 -->
           <div class="work__box">
             <div class="work__text">
               <h3>My Projects</h3>
               <p>
-                Here are a few of my projects ive worked on over 6 years of coding/game development. My main strength is unity and C# with 5 years expierence, my youtube channel shows glimpses into my projects throughout my learning expierence. 
+                Here are a few projects I’ve worked on over ~6 years of coding/game development. My main strength is Unity and C# (5+ years). My YouTube channel shows development progress and demos.
               </p>
-               <a href="https://www.youtube.com/@aaronebrey9829" title="View Youtube page" target="_blank">
-               </a>
               <ul class="work__list">
                 <li>C++</li>
                 <li>C#</li>
@@ -97,16 +88,16 @@
               </ul>
 
               <div class="work__links">
-                <a href="https://github.com/Clawedatom" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
+                <a href="https://github.com/Clawedatom" target="_blank" rel="noopener noreferrer" class="link__text">
+                  Visit GitHub <span>&rarr;</span>
                 </a>
-                <a href="https://github.com/Clawedatom" title="View Github Profile" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
+                <a href="https://github.com/Clawedatom" title="View Github Profile" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub icon" loading="lazy" />
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./images/MechanicsProject.png" class="work__image" alt="Project 1" />
+              <img src="./images/MechanicsProject.png" class="work__image" alt="Mechanics project screenshot" loading="lazy" />
             </div>
           </div>
 
@@ -115,51 +106,48 @@
             <div class="work__text">
               <h3>Rocket Jumper</h3>
               <p>
-                Rocket Jumper is a 2D platformer, it isthe first game I fully developed and published.
+                Rocket Jumper is a 2D platformer — the first game I fully developed and published.
               </p>
               <ul class="work__list">
-                <li>Unity2D<li>
+                <li>Unity2D</li>
                 <li>C#</li>
                 <li>Unity</li>
               </ul>
 
               <div class="work__links">
-                <a href="https://zelldauron.itch.io/rocketjumper" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>       
+                <a href="https://zelldauron.itch.io/rocketjumper" target="_blank" rel="noopener noreferrer" class="link__text">
+                  Play on Itch.io <span>&rarr;</span>
+                </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./images/rocketJumperGame.png" class="work__image" alt="Project 2" />
+              <img src="./images/rocketJumperGame.png" class="work__image" alt="Rocket Jumper gameplay screenshot" loading="lazy" />
             </div>
           </div>
 
-          
-        <!-- Mechanics -->
+          <!-- Combo System Project -->
           <div class="work__box">
             <div class="work__text">
               <h3>Combo System Project</h3>
               <p>
-                Made a combat system to learn unreal engine.
+                Built a combat combo system to learn Unreal Engine and character animation integration.
               </p>
               <ul class="work__list">
-                <li>Unreal</li>
+                <li>Unreal Engine</li>
                 <li>C++</li>
                 <li>Blueprints</li>
                 <li>Animation</li>
               </ul>
 
               <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+                <a href="#" class="link__text" target="_blank" rel="noopener noreferrer">Visit Site <span>&rarr;</span></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Combo system source">
+                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub" loading="lazy" />
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./images/MechanicsProject.png" class="work__image" alt="Project 3" />
+              <img src="./images/MechanicsProject.png" class="work__image" alt="Combo system project screenshot" loading="lazy" />
             </div>
           </div>
 
@@ -168,166 +156,154 @@
             <div class="work__text">
               <h3>Greedy Little Goblin</h3>
               <p>
-                A heisting game where you play as a goblin, stealing from humans. And you have the ability to shrink. Greedy little goblins was developed for a game jam I co-hosted.
+                A heisting game where you play as a goblin stealing from humans with a size-shrinking mechanic. Developed for a game jam I co-hosted.
               </p>
               <ul class="work__list">
                 <li>Unity</li>
                 <li>C#</li>
-                <li>GameJam</li>
+                <li>Game Jam</li>
                 <li>Unity3D</li>
               </ul>
 
               <div class="work__links">
-                <a href="https://zelldauron.itch.io/greedy-little-goblins" class="link__text">
+                <a href="https://zelldauron.itch.io/greedy-little-goblins" target="_blank" rel="noopener noreferrer" class="link__text">
                   Visit Itch Page <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./images/GLG_JamImage.png" class="work__image" alt="Project 4" />
+              <img src="./images/GLG_JamImage.png" class="work__image" alt="Greedy Little Goblin jam screenshot" loading="lazy" />
             </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** Skills ***** -->
+    <section class="skills" id="skills">
+      <div class="row">
+        <h2>Skills</h2>
+        <p class="skills__intro">
+          Here are some of the tools, engines, and languages I use to build games and gameplay systems.
+        </p>
+
+        <div class="skills__grid">
+          <div class="skills__category">
+            <h3>🎮 Engines</h3>
+            <ul>
+              <li>Unity (5+ years)</li>
+              <li>Unreal Engine</li>
+              <li>Roblox Studio</li>
+            </ul>
+          </div>
+
+          <div class="skills__category">
+            <h3>💻 Languages</h3>
+            <ul>
+              <li>C#</li>
+              <li>C++</li>
+              <li>Python</li>
+              <li>Java</li>
+            </ul>
+          </div>
+
+          <div class="skills__category">
+            <h3>⚙️ Tools</h3>
+            <ul>
+              <li>GitHub</li>
+              <li>Blender</li>
+              <li>Visual Studio</li>
+              <li>Trello</li>
+            </ul>
+          </div>
+
+          <div class="skills__category">
+            <h3>🧠 Disciplines</h3>
+            <ul>
+              <li>Gameplay Programming</li>
+              <li>Character State Systems</li>
+              <li>Procedural Generation</li>
+              <li>Team Collaboration</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-
-    <!-- ***** Skills ***** -->
-
-<section class="skills" id="skills">
-  <div class="row">
-    <h2>Skills</h2>
-    <p class="skills__intro">
-      Here are some of the tools, engines, and languages I use to build games and gameplay systems.
-    </p>
-
-    <div class="skills__grid">
-
-      <div class="skills__category">
-        <h3>🎮 Engines</h3>
-        <ul>
-          <li>Unity (5+ years)</li>
-          <li>Unreal Engine </li>
-          <li>Roblox Studio </li>
-        </ul>
-      </div>
-
-      <div class="skills__category">
-        <h3>💻 Languages</h3>
-        <ul>
-          <li>C#</li>
-          <li>C++</li>
-          <li>Python</li>
-          <li>Java</li>
-        </ul>
-      </div>
-
-      <div class="skills__category">
-        <h3>⚙️ Tools</h3>
-        <ul>
-          <li>GGitHub</li>
-          <li>Blender</li>
-          <li>Visual Studior</li>
-          <li>Trello</li>
-        </ul>
-      </div>
-
-      <div class="skills__category">
-        <h3>🧠 Disciplines</h3>
-        <ul>
-          <li>Gameplay Programming</li>
-          <li>Character State Systems</li>
-          <li>Procedural Generation</li>
-          <li>Team Collaboration</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-    
     <!-- **** About Me ***** -->
-
-   
-
     <section class="aboutme" id="aboutme">
       <div class="row">
         <h2>About Me</h2>
         <div class="about__content">
           <div class="about__text">
-            <!-- Replace the below paragraph with info about yourself  -->
             <p>
-              I am a 21 year old undergraduate studying Game Development at MMU. I have a passionate for developing games - especially 3d. I have interests in fitness with 5 years at the gym and 6 years developing
+              I am a 21-year-old undergraduate studying Game Development at MMU. I have a passion for developing games — especially 3D. I also enjoy fitness, with 5 years at the gym, and ~6 years of personal projects and development experience.
             </p>
-             <!-- Provide a link to your resume  -->
-            <a href="#" class="btn">My CV</a>
+
+            <!-- Replace the href with your actual CV file -->
+            <a href="/assets/AaronEbrey_CV.pdf" class="btn" download>My CV</a>
           </div>
 
           <div class="about__photo-container">
-           
-            <img class="about__photo" src="./images/Splines.png" alt="" />
+            <img class="about__photo" src="./images/Splines.png" alt="Spline demo image" loading="lazy" />
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  
   <!-- ***** Contact ***** -->
-
   <section class="contact" id="contact">
     <div class="row">
       <h2>Get in Touch</h2>
       <div class="contact__info">
         <p>
-          If you are looking for a passionate developer which an interest in all things game dev. Contact me
+          If you're looking for a passionate developer with an interest in all things game dev, contact me:
         </p>
-        <!-- Replace the email with yours -->
-        <a href="aaron.ebrey@gmail.com" class="btn">aaron.ebrey@gmail.com</a>
+        <a href="mailto:aaron.ebrey@gmail.com" class="btn">aaron.ebrey@gmail.com</a>
       </div>
     </div>
   </section>
 
   <!-- ***** Footer ***** -->
-
   <footer role="contentinfo" class="footer">
     <div class="row">
-      <!-- Update the links to point to your accounts -->
       <ul class="footer__social-links">
         <li class="footer__social-link-item">
-          <a href="https://zelldauron.itch.io/" title="Link to Itch.io Profile"> 
-            <img src="./images/itch_icon.png" class="footer__social-image" alt="Itch">
+          <a href="https://zelldauron.itch.io/" title="Itch.io" target="_blank" rel="noopener noreferrer">
+            <img src="./images/itch_icon.png" class="footer__social-image" alt="Itch.io" loading="lazy" />
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href="https://github.com/Clawedatom" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          <a href="https://github.com/Clawedatom" title="GitHub" target="_blank" rel="noopener noreferrer">
+            <img src="./images/github.svg" class="footer__social-image" alt="GitHub" loading="lazy" />
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/aaron-ebrey-9bb8b4240/">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+          <a href="https://www.linkedin.com/in/aaron-ebrey-9bb8b4240/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <img src="./images/linkedin.svg" class="footer__social-image" alt="LinkedIn" loading="lazy" />
           </a>
         </li>
       </ul>
 
-      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
       <p>
-        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
+        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link" target="_blank" rel="noopener noreferrer">Nisar</a>.
       </p>
+
       <div class="footer__github-buttons">
         <iframe
           src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
-          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
-        </iframe>
+          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub"></iframe>
       </div>
     </div>
   </footer>
 
   <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image" loading="lazy" />
   </a>
-  <script src="./index.js"></script>
+
+  <script src="./index.js" defer></script>
 </body>
 
 </html>
