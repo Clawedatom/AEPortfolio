@@ -80,7 +80,10 @@
         <h1 class="heading-primary">
           <span>Aaron Ebrey</span>
         </h1>
-        <p>A Game Developer based in Birmingham, UK.</p>
+        <p>
+          Game Development student at MMU · Gameplay Programmer<br>
+          <strong>Currently seeking a 12-month placement</strong>
+        </p>
         <a href="#contact" class="btn btn--pink">Get in touch</a>
       </div>
     </div>
@@ -93,7 +96,9 @@
       <div class="row">
         <h2>Overview</h2>
         <div class="work__boxes">
-
+          <p>
+                I focus on gameplay and systems programming, with experience building state-driven characters, modular player systems, UI features and world generation in Unity and Unreal Engine.
+          </p>
           <!-- Project 1: Rocket Jumper -->
           <div class="work__box">
             <div class="work__text">
@@ -118,6 +123,13 @@
                 <h4>Outcome</h4>
                 <p>Released on Itch; learned release pipeline and how to polish a game. <a href="https://zelldauron.itch.io/rocketjumper" target="_blank" rel="noopener noreferrer">Play demo</a></p>
 
+                <h4>Key Systems</h4>
+                <ul>
+                  <li>Rigidbody-based movement controller</li>
+                  <li>Level progression system and asset management</li>
+                  <li>Menu & audio management</li>
+                </ul>
+                
                 <p class="muted" style="margin-top:.6rem;">
                   <a href="https://github.com/Clawedatom/rocketjumper" target="_blank" rel="noopener noreferrer">Source on GitHub</a> •
                   <a href="/assets/rocketjumper-gif.gif" target="_blank" rel="noopener noreferrer">Short gameplay GIF</a>
@@ -156,7 +168,15 @@
 
                 <h4>Outcome</h4>
                 <p>Completed for the jam and published on Itch. Great practice in rapid design and scope control. <a href="https://zelldauron.itch.io/greedy-little-goblins" target="_blank" rel="noopener noreferrer">Play it</a></p>
-
+                
+                
+                <h4>Key Systems</h4>
+                <ul>
+                  <li>State driven player controller</li>
+                  <li>Enemy AI and detection</li>
+                  <li>Game loop systems and level generation</li>
+                </ul>
+                
                 <p class="muted" style="margin-top:.6rem;">
                   <a href="https://github.com/Clawedatom/" target="_blank" rel="noopener noreferrer">GitHub profile</a>
                 </p>
@@ -176,7 +196,7 @@
             <div class="work__text">
               <h3>Combat Combo Project</h3>
               <p>
-                A Unreal Engine 5 Project demonstrating a modular, state driven combat combo system with animations.
+                A Unreal Engine 5 project demonstrating a modular, state driven combat combo system with animations.
               </p>
 
               <!-- case study -->
@@ -189,13 +209,20 @@
                 <ul>
                   <li>Create a finite state system for the player character</li>
                   <li>Create a Combat System in Unreal Engine 5 with a focus on sword Combos.</li>
-                  <li>Teach myself C++ alongside the development of this project.</li>
-                  <li>Understand Unreal Engine Programming and animatioon.</li>
+                  <li>Developed the project while learning Unreal Engine C++ workflows, focusing on clean architecture and gameplay logic.</li>
+                  <li>Understand Unreal Engine Programming and animation.</li>
                 </ul>
 
                 <h4>Outcome</h4>
                 <p>Developed a state driven sword combat system with a combo mechanic. Sprinting, target dummies and visual effects were also implemented. <a href="https://zelldauron.itch.io/greedy-little-goblins" target="_blank" rel="noopener noreferrer">Play it</a></p>
 
+                 <h4>Key Systems</h4>
+                <ul>
+                  <li>State system based player character</li>
+                  <li>modular combat system with sword combos</li>
+                  <li>visual attacking feedback such as audio and effects</li>
+                </ul>
+                
                 <p class="muted" style="margin-top:.6rem;">
                   <a href="https://github.com/Clawedatom/" target="_blank" rel="noopener noreferrer">GitHub profile</a>
                 </p>
@@ -257,23 +284,16 @@
             </ul>
           </div>
           <div class="skills__category">
-            <h3>⚙️ Tools</h3>
+            <h3>⚙️ Programming Concepts</h3>
             <ul>
-              <li>GitHub</li>
-              <li>Blender</li>
-              <li>Visual Studio</li>
-              <li>Trello</li>
+              <li>State Machines</li>
+              <li>Player character systems</li>
+              <li>Modular System Design</li>
+              <li>Gameplay focused architecture</li>
+              <li>Procedural generaton</li>
             </ul>
           </div>
-          <div class="skills__category">
-            <h3>🧠 Disciplines</h3>
-            <ul>
-              <li>Gameplay Programming</li>
-              <li>Character State Systems</li>
-              <li>3D Games</li>
-              <li>Team Collaboration</li>
-            </ul>
-          </div>
+         
         </div>
       </div>
     </section>
@@ -284,7 +304,7 @@
         <h2>About Me</h2>
         <div class="about__content">
           <div class="about__text">
-            <p>I am a 21-year-old undergraduate studying Game Development at MMU. I have a passion for developing games — especially 3D. I also enjoy fitness, with 5 years at the gym, and ~6 years of personal projects and development experience.</p>
+            <p>I am a 21-year-old undergraduate studying Game Development at MMU. I enjoy building gameplay systems and mechanics, particularly for 3D games, with a focus on player feel and clean, maintainable code. I also enjoy fitness, with 5 years at the gym, and ~6 years of personal projects and development experience.</p>
 
             <a href="https://www.youtube.com/@aaronebrey9829/featured" target="_blank" rel="noopener noreferrer" class="link__text">Visit youtube channel - my game development progression. <span>&rarr;</span></a>
             
@@ -309,35 +329,9 @@
     <div class="row">
       <h2>Get in Touch</h2>
       <div class="contact__info">
-        <p>If you're looking for a passionate developer with an interest in all things game dev, contact me:</p>
-
-        <!-- Netlify-friendly contact form (honeypot for spam) -->
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" style="max-width:560px;">
-          <input type="hidden" name="form-name" value="contact" />
-          <p style="display:none">
-            <label>Don’t fill this out: <input name="bot-field" /></label>
-          </p>
-
-          <label style="display:block;margin-bottom:.5rem;">
-            Name
-            <input type="text" name="name" required style="width:100%;padding:.6rem;border-radius:8px;border:1px solid rgba(17,24,39,0.06);margin-top:.25rem;">
-          </label>
-
-          <label style="display:block;margin-bottom:.5rem;">
-            Email
-            <input type="email" name="email" required style="width:100%;padding:.6rem;border-radius:8px;border:1px solid rgba(17,24,39,0.06);margin-top:.25rem;">
-          </label>
-
-          <label style="display:block;margin-bottom:.5rem;">
-            Message
-            <textarea name="message" rows="5" required style="width:100%;padding:.6rem;border-radius:8px;border:1px solid rgba(17,24,39,0.06);margin-top:.25rem;"></textarea>
-          </label>
-
-          <button class="btn btn--pink" type="submit">Send</button>
-        </form>
-
+        <p>If you're looking for a passionate developer with an interest in a career in games development, contact me via email:</p>
         <p style="margin-top:1rem;">
-          Or email directly: <a href="mailto:aaron.ebrey@gmail.com" class="btn" style="display:inline-block;padding:.35rem .6rem;border-radius:8px;margin-left:.6rem;">aaron.ebrey@gmail.com</a>
+          <a href="mailto:aaron.ebrey@gmail.com" class="btn" style="display:inline-block;padding:.35rem .6rem;border-radius:8px;margin-left:.6rem;">aaron.ebrey@gmail.com</a>
         </p>
       </div>
     </div>
