@@ -67,10 +67,11 @@
     <div class="row">
       <nav class="nav" role="navigation" aria-label="Main navigation">
         <ul class="nav__items">
+          <li class="nav__item"><a href="#overview" class="nav__link">Overview</a></li>
           <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
           <li class="nav__item"><a href="#aboutme" class="nav__link">About Me</a></li>
-          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
           <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -91,55 +92,61 @@
 
   <main role="main" id="main">
 
-    <!-- ***** Projects / Overview ***** -->
-    <section class="projects" id="projects">
+    <!-- ***** Overview Section ***** -->
+    <section class="overview" id="overview">
       <div class="row">
         <h2>Overview</h2>
+        <p>
+          I focus on gameplay and systems programming, with experience building state-driven characters, modular player systems, UI features, and world generation in Unity and Unreal Engine.
+        </p>
+      </div>
+    </section>
+
+    <!-- ***** Projects Section ***** -->
+    <section class="projects" id="projects">
+      <div class="row">
+        <h2>Featured Projects</h2>
         <div class="work__boxes">
-          <p>
-                I focus on gameplay and systems programming, with experience building state-driven characters, modular player systems, UI features and world generation in Unity and Unreal Engine.
-          </p>
+
           <!-- Project 1: Rocket Jumper -->
           <div class="work__box">
             <div class="work__text">
               <h3>Rocket Jumper</h3>
-              <p>
-                Rocket Jumper is a 2D platformer — the first game I fully developed and published.
-              </p>
+              <p>Rocket Jumper is a 2D platformer — the first game I fully developed and published.</p>
 
-              <!-- Short case study -->
-              <div class="case">
-                <p class="muted">Role: Solo dev • Engine: Unity2D • Languages: C# • Time: 4 months</p>
+              <p class="muted">Role: Solo Dev • Engine: Unity2D • Languages: C# • Time: 4 months</p>
+
+              <h4>Key Systems</h4>
+              <ul>
+                <li>Rigidbody-based movement controller</li>
+                <li>Level progression system and asset management</li>
+                <li>Menu & audio management</li>
+              </ul>
+
+              <details class="case">
+                <summary>Technical Breakdown</summary>
                 <h4>Goal</h4>
-                <p>Create my first completed game and to publish on Itch.</p>
+                <p>Create my first completed game and publish on Itch.io.</p>
 
                 <h4>Approach</h4>
                 <ul>
-                  <li>Develop a rigidbody based movement system for the rocket.</li>
-                  <li>Implemented level progression, unique level obstacles and feedback systems.</li>
-                  <li>Create a menu system as well as audio and art.</li>
+                  <li>Developed a rigidbody-based movement system for the rocket</li>
+                  <li>Implemented level progression, unique level obstacles, and feedback systems</li>
+                  <li>Created menu, audio, and art assets</li>
                 </ul>
 
                 <h4>Outcome</h4>
-                <p>Released on Itch; learned release pipeline and how to polish a game. <a href="https://zelldauron.itch.io/rocketjumper" target="_blank" rel="noopener noreferrer">Play demo</a></p>
-
-                <h4>Key Systems</h4>
-                <ul>
-                  <li>Rigidbody-based movement controller</li>
-                  <li>Level progression system and asset management</li>
-                  <li>Menu & audio management</li>
-                </ul>
-                
-                <p class="muted" style="margin-top:.6rem;">
-                  <a href="https://github.com/Clawedatom/rocketjumper" target="_blank" rel="noopener noreferrer">Source on GitHub</a> •
-                  <a href="/assets/rocketjumper-gif.gif" target="_blank" rel="noopener noreferrer">Short gameplay GIF</a>
+                <p>Released on Itch; learned the release pipeline and how to polish a game. 
+                  <a href="https://zelldauron.itch.io/rocketjumper" target="_blank" rel="noopener noreferrer">Play demo</a>
                 </p>
-              </div>
+              </details>
 
-              <div class="work__links">
-                <a href="https://zelldauron.itch.io/rocketjumper" target="_blank" rel="noopener noreferrer" class="link__text">Play on Itch.io <span>&rarr;</span></a>
-              </div>
+              <p class="muted" style="margin-top:.6rem;">
+                <a href="https://github.com/Clawedatom/rocketjumper" target="_blank" rel="noopener noreferrer">Source on GitHub</a> •
+                <a href="/assets/rocketjumper-gif.gif" target="_blank" rel="noopener noreferrer">Short gameplay GIF</a>
+              </p>
             </div>
+
             <div class="work__image-box">
               <img src="./images/rocketJumperGame.png" class="work__image" alt="Rocket Jumper gameplay screenshot" loading="lazy" />
             </div>
@@ -149,95 +156,89 @@
           <div class="work__box">
             <div class="work__text">
               <h3>Greedy Little Goblin</h3>
-              <p>
-                A game jam project where you play as a goblin that can shrink and grow to collect treasure from humans.
-              </p>
+              <p>A game jam project where you play as a goblin that can shrink and grow to collect treasure from humans.</p>
 
-              <!-- Short case study -->
-              <div class="case">
-                <p class="muted">Role: Co-host & Dev • Engine: Unity3D • Languages: C# • Time: Game Jam</p>
+              <p class="muted">Role: Co-host & Dev • Engine: Unity3D • Languages: C# • Time: Game Jam</p>
+
+              <h4>Key Systems</h4>
+              <ul>
+                <li>State-driven player controller</li>
+                <li>Enemy AI and detection</li>
+                <li>Game loop systems and level generation</li>
+              </ul>
+
+              <details class="case">
+                <summary>Technical Breakdown</summary>
                 <h4>Goal</h4>
-                <p>Create a simple to play, fun game for the game jam with the theme "Growth" .</p>
+                <p>Create a simple and fun game for the game jam with the theme "Growth".</p>
 
                 <h4>Approach</h4>
                 <ul>
-                  <li>Create a state driven player character with a shrink/grow mechanic.</li>
-                  <li>Have a working game finished within the game jams timeframe.</li>
-                  <li>Rapid prototyping and iterative playtesting during the jam.</li>
+                  <li>Implemented a state-driven player character with shrink/grow mechanics</li>
+                  <li>Rapid prototyping and iterative playtesting</li>
+                  <li>Delivered a working game within the jam timeframe</li>
                 </ul>
 
                 <h4>Outcome</h4>
-                <p>Completed for the jam and published on Itch. Great practice in rapid design and scope control. <a href="https://zelldauron.itch.io/greedy-little-goblins" target="_blank" rel="noopener noreferrer">Play it</a></p>
-                
-                
-                <h4>Key Systems</h4>
-                <ul>
-                  <li>State driven player controller</li>
-                  <li>Enemy AI and detection</li>
-                  <li>Game loop systems and level generation</li>
-                </ul>
-                
-                <p class="muted" style="margin-top:.6rem;">
-                  <a href="https://github.com/Clawedatom/" target="_blank" rel="noopener noreferrer">GitHub profile</a>
+                <p>Completed and published on Itch.io. Great practice in rapid design and scope control. 
+                  <a href="https://zelldauron.itch.io/greedy-little-goblins" target="_blank" rel="noopener noreferrer">Play it</a>
                 </p>
-              </div>
+              </details>
 
-              <div class="work__links">
-                <a href="https://zelldauron.itch.io/greedy-little-goblins" target="_blank" rel="noopener noreferrer" class="link__text">Visit Itch Page <span>&rarr;</span></a>
-              </div>
+              <p class="muted" style="margin-top:.6rem;">
+                <a href="https://github.com/Clawedatom/" target="_blank" rel="noopener noreferrer">GitHub profile</a>
+              </p>
             </div>
+
             <div class="work__image-box">
               <img src="./images/GLG_JamImage.png" class="work__image" alt="Greedy Little Goblin jam screenshot" loading="lazy" />
             </div>
           </div>
 
-          <!-- Project 3: Combo System-->
+          <!-- Project 3: Combat Combo Project -->
           <div class="work__box">
             <div class="work__text">
               <h3>Combat Combo Project</h3>
-              <p>
-                A Unreal Engine 5 project demonstrating a modular, state driven combat combo system with animations.
-              </p>
+              <p>A Unreal Engine 5 project demonstrating a modular, state-driven combat combo system with animations.</p>
 
-              <!-- case study -->
-              <div class="case">
-                <p class="muted">Role: Solo Dev • Engine: Unreal Engine • Languages: C++ • Time: 2 Months</p>
+              <p class="muted">Role: Solo Dev • Engine: Unreal Engine • Languages: C++ • Time: 2 Months</p>
+
+              <h4>Key Systems</h4>
+              <ul>
+                <li>State system-based player character</li>
+                <li>Modular combat system with sword combos</li>
+                <li>Visual attacking feedback (audio & effects)</li>
+              </ul>
+
+              <details class="case">
+                <summary>Technical Breakdown</summary>
                 <h4>Goal</h4>
-                <p>Create A Combat System in Unreal Engine 5 that focused on Sword Combos with other features included.</p>
+                <p>Create a sword combat system in UE5 while learning C++ and clean architecture.</p>
 
                 <h4>Approach</h4>
                 <ul>
-                  <li>Create a finite state system for the player character</li>
-                  <li>Create a Combat System in Unreal Engine 5 with a focus on sword Combos.</li>
-                  <li>Developed the project while learning Unreal Engine C++ workflows, focusing on clean architecture and gameplay logic.</li>
-                  <li>Understand Unreal Engine Programming and animation.</li>
+                  <li>Implemented finite state system for the player</li>
+                  <li>Separated combat logic from input handling</li>
+                  <li>Integrated animation and VFX feedback</li>
                 </ul>
 
                 <h4>Outcome</h4>
-                <p>Developed a state driven sword combat system with a combo mechanic. Sprinting, target dummies and visual effects were also implemented. <a href="https://zelldauron.itch.io/greedy-little-goblins" target="_blank" rel="noopener noreferrer">Play it</a></p>
-
-                 <h4>Key Systems</h4>
-                <ul>
-                  <li>State system based player character</li>
-                  <li>modular combat system with sword combos</li>
-                  <li>visual attacking feedback such as audio and effects</li>
-                </ul>
-                
-                <p class="muted" style="margin-top:.6rem;">
-                  <a href="https://github.com/Clawedatom/" target="_blank" rel="noopener noreferrer">GitHub profile</a>
+                <p>Developed a functional combo system with sprinting, target dummies, and visual/audio feedback. 
+                  <a href="https://zelldauron.itch.io/greedy-little-goblins" target="_blank" rel="noopener noreferrer">Play it</a>
                 </p>
-              </div>
+              </details>
 
-              <div class="work__links">
-                <a href="https://github.com/Clawedatom/Combo-System-UE5-Project.git" target="_blank" rel="noopener noreferrer" class="link__text">Mechanics project Github Page <span>&rarr;</span></a>
-              </div>
+              <p class="muted" style="margin-top:.6rem;">
+                <a href="https://github.com/Clawedatom/" target="_blank" rel="noopener noreferrer">GitHub profile</a>
+              </p>
             </div>
+
             <div class="work__image-box">
               <img src="./images/MechanicsProject.png" class="work__image" alt="Mechanics project screenshot" loading="lazy" />
             </div>
           </div>
 
-          <!-- Project 4: Misc Projects card -->
+          <!-- Project 4: Misc Projects -->
           <div class="work__box">
             <div class="work__text">
               <h3>Other Projects & Experiments</h3>
@@ -264,7 +265,7 @@
     <section class="skills" id="skills">
       <div class="row">
         <h2>Skills</h2>
-        <p class="skills__intro">Here are some of the tools, engines, and languages I use to build games and gameplay systems.</p>
+        <p class="skills__intro">Here are some of the tools, engines, languages, and programming concepts I use to build games and gameplay systems.</p>
         <div class="skills__grid">
           <div class="skills__category">
             <h3>🎮 Engines</h3>
@@ -287,28 +288,30 @@
             <h3>⚙️ Programming Concepts</h3>
             <ul>
               <li>State Machines</li>
-              <li>Player character systems</li>
+              <li>Player Character Systems</li>
               <li>Modular System Design</li>
-              <li>Gameplay focused architecture</li>
-              <li>Procedural generaton</li>
+              <li>Gameplay-focused Architecture</li>
+              <li>Procedural Generation</li>
             </ul>
           </div>
-         
         </div>
       </div>
     </section>
 
-    <!-- **** About Me ***** -->
+    <!-- ***** About Me ***** -->
     <section class="aboutme" id="aboutme">
       <div class="row">
         <h2>About Me</h2>
         <div class="about__content">
           <div class="about__text">
-            <p>I am a 21-year-old undergraduate studying Game Development at MMU. I enjoy building gameplay systems and mechanics, particularly for 3D games, with a focus on player feel and clean, maintainable code. I also enjoy fitness, with 5 years at the gym, and ~6 years of personal projects and development experience.</p>
+            <p>
+              I am a 21-year-old undergraduate studying Game Development at MMU. I enjoy building gameplay systems and mechanics, particularly for 3D games, with a focus on player feel and clean, maintainable code. I also enjoy fitness, with 5 years at the gym, and ~6 years of personal projects and development experience.
+            </p>
 
-            <a href="https://www.youtube.com/@aaronebrey9829/featured" target="_blank" rel="noopener noreferrer" class="link__text">Visit youtube channel - my game development progression. <span>&rarr;</span></a>
-            
-            
+            <a href="https://www.youtube.com/@aaronebrey9829/featured" target="_blank" rel="noopener noreferrer" class="link__text">
+              Visit YouTube channel - my game development progression <span>&rarr;</span>
+            </a>
+
             <!-- CV CTA -->
             <div class="cv-cta" style="margin-top:1rem;">
               <a href="assets/AaronEbrey_CV.pdf" download class="btn btn--pink">Open CV</a>
@@ -322,20 +325,21 @@
         </div>
       </div>
     </section>
-  </main>
 
-  <!-- ***** Contact ***** -->
-  <section class="contact" id="contact">
-    <div class="row">
-      <h2>Get in Touch</h2>
-      <div class="contact__info">
-        <p>If you're looking for a passionate developer with an interest in a career in games development, contact me via email:</p>
-        <p style="margin-top:1rem;">
-          <a href="mailto:aaron.ebrey@gmail.com" class="btn" style="display:inline-block;padding:.35rem .6rem;border-radius:8px;margin-left:.6rem;">aaron.ebrey@gmail.com</a>
-        </p>
+    <!-- ***** Contact ***** -->
+    <section class="contact" id="contact">
+      <div class="row">
+        <h2>Get in Touch</h2>
+        <div class="contact__info">
+          <p>If you're looking for a passionate developer with an interest in a career in games development, contact me via email:</p>
+          <p style="margin-top:1rem;">
+            <a href="mailto:aaron.ebrey@gmail.com" class="btn" style="display:inline-block;padding:.35rem .6rem;border-radius:8px;margin-left:.6rem;">aaron.ebrey@gmail.com</a>
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+  </main>
 
   <!-- ***** Footer ***** -->
   <footer role="contentinfo" class="footer">
