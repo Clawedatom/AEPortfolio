@@ -159,11 +159,15 @@ a:hover {
 }
 
 /* Arrow / icon inside buttons */
-.btn svg,
+.btn svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
 .btn span {
   font-size: 0.9rem;
-  width: 1em;
-  height: 1em;
+  line-height: 1;
 }
 
 /* Accent button */
@@ -173,6 +177,9 @@ a:hover {
   border: none;
 }
 
+.contact {
+  font-size: 1rem;
+}
 /* ================================
    Projects Section
 ================================ */
