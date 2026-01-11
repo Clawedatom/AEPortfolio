@@ -4,24 +4,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
 :root {
-  /* Background layers */
+  /* Background */
   --bg:
-    radial-gradient(1200px 600px at 10% -10%, rgba(138,198,255,0.18), transparent 40%),
-    radial-gradient(1000px 500px at 90% 10%, rgba(255,126,182,0.16), transparent 45%),
-    radial-gradient(800px 500px at 50% 100%, rgba(255,214,138,0.18), transparent 50%),
-    linear-gradient(180deg, #f7f8ff, #fdfdff);
+    radial-gradient(1200px 600px at 10% -10%, rgba(111,186,255,0.14), transparent 40%),
+    radial-gradient(1000px 500px at 90% 10%, rgba(255,111,174,0.12), transparent 45%),
+    radial-gradient(800px 500px at 50% 100%, rgba(255,204,102,0.14), transparent 50%),
+    linear-gradient(180deg, #141824, #1b2030);
 
   /* Colours */
-  --card: #ffffff;
-  --text: #212631;
-  --muted: #99a0b5;
+  --card: rgba(255,255,255,0.06);
+  --glass: rgba(255,255,255,0.08);
+  --text: #e6e9f2;
+  --muted: #a2acc9;
   --accent: #ff6fae;
   --accent-2: #6fbaff;
   --accent-3: #ffcc66;
 
   /* Effects */
-  --shadow: rgba(17,24,39,0.06);
-  --glass: rgba(255,255,255,0.75);
+  --shadow: rgba(0,0,0,0.35);
 
   /* Layout */
   --space-xs: 0.25rem;
@@ -39,7 +39,7 @@
 }
 
 /* ================================
-   Reset & Base Styles
+   Reset & Base
 ================================ */
 *,
 *::before,
@@ -57,18 +57,6 @@ body {
   font-weight: var(--body-weight);
   font-size: 16px;
   line-height: 1.45;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
 }
 
 /* ================================
@@ -78,7 +66,7 @@ img {
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 var(--space);
-  width: calc(100% - (2 * var(--space)));
+  width: 100%;
 }
 
 /* ================================
@@ -86,31 +74,23 @@ img {
 ================================ */
 .header {
   padding: var(--space-lg) 0;
-  background: rgba(255,255,255,0.45);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(20,28,50,0.05);
-}
-
-.header__text-box {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .heading-primary {
   margin: 0 0 0.25rem 0;
-  font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
   font-weight: var(--heading-weight);
-  letter-spacing: -0.02em;
   background: linear-gradient(90deg, var(--accent), var(--accent-2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .header__text p {
-  margin: 0 0 var(--space) 0;
-  color: var(--muted);
   max-width: 48ch;
+  color: var(--muted);
 }
 
 /* ================================
@@ -125,46 +105,48 @@ img {
   display: flex;
   gap: 1rem;
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 
 .nav__link {
+  font-size: 0.95rem;
   padding: 0.4rem 0.6rem;
   color: var(--muted);
-  font-weight: 600;
   border-radius: 8px;
-  transition: all 160ms ease;
 }
 
-.nav__link:hover,
-.nav__link:focus {
+.nav__link:hover {
+  background: rgba(255,255,255,0.08);
   color: var(--text);
-  background: rgba(138,198,255,0.12);
 }
 
 /* ================================
-   Buttons
+   Buttons (FIXED SIZE)
 ================================ */
 .btn {
-  display: inline-block;
-  padding: 0.6rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1;
   border-radius: 10px;
   background: var(--card);
-  border: 1px solid rgba(17,24,39,0.06);
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.12);
   box-shadow: 0 6px 18px var(--shadow);
   font-weight: 600;
-  transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(17,24,39,0.08);
+.btn svg,
+.btn img {
+  width: 14px;
+  height: 14px;
 }
 
 .btn--pink {
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: white;
+  color: #fff;
   border: none;
 }
 
@@ -173,46 +155,38 @@ img {
 ================================ */
 .projects {
   padding: var(--space-lg) 0;
-  background: rgba(255,255,255,0.55);
-  backdrop-filter: blur(6px);
+  background: rgba(255,255,255,0.03);
 }
 
 .work__boxes {
   display: grid;
-  grid-template-columns: 1fr;
   gap: var(--space-md);
 }
 
-/* ----------------
+/* ================================
    Work Block
----------------- */
+================================ */
 .work__box {
   background: var(--glass);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.45);
   border-radius: var(--radius);
-  box-shadow: 0 8px 20px var(--shadow);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 30px var(--shadow);
   overflow: hidden;
   opacity: 0;
-  transform: translateY(8px);
-  transition: transform 220ms ease, box-shadow 220ms ease, opacity 220ms ease;
+  transform: translateY(10px);
+  transition: all 220ms ease;
 }
 
-/* Work Block – revealed state */
 .work__box.revealed {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Work Block – hover */
 .work__box:hover {
   transform: translateY(-6px);
-  box-shadow:
-    0 18px 40px rgba(17,24,39,0.08),
-    0 0 0 1px rgba(138,198,255,0.12);
 }
 
-/* Work Block – text */
+/* Work block content */
 .work__text {
   padding: var(--space);
 }
@@ -222,34 +196,30 @@ img {
 }
 
 .work__text p {
-  margin: 0 0 0.6rem;
   color: var(--muted);
 }
 
-/* Work Block – tech list */
+/* Tech list */
 .work__list {
   display: flex;
-  gap: 0.6rem;
+  gap: 0.5rem;
   list-style: none;
   padding: 0;
   margin: 0 0 var(--space);
-  flex-wrap: wrap;
 }
 
 .work__list li {
-  background: rgba(138,198,255,0.08);
+  font-size: 0.8rem;
+  background: rgba(255,255,255,0.08);
   padding: 0.25rem 0.5rem;
   border-radius: 999px;
-  font-size: 0.9rem;
-  color: var(--muted);
 }
 
-/* Work Block – image */
+/* Image */
 .work__image {
   width: 100%;
-  height: 260px;
+  height: 240px;
   object-fit: cover;
-  border-radius: 8px;
 }
 
 /* ================================
@@ -257,7 +227,6 @@ img {
 ================================ */
 .skills {
   padding: var(--space-lg) 0;
-  background: linear-gradient(180deg, rgba(138,198,255,0.08), transparent);
 }
 
 .skills__grid {
@@ -267,10 +236,9 @@ img {
 
 .skills__category {
   background: var(--glass);
-  backdrop-filter: blur(8px);
   border-radius: 10px;
   padding: var(--space);
-  box-shadow: 0 6px 18px var(--shadow);
+  box-shadow: 0 6px 20px var(--shadow);
 }
 
 /* ================================
@@ -278,7 +246,6 @@ img {
 ================================ */
 .aboutme {
   padding: var(--space-lg) 0;
-  background: linear-gradient(135deg, rgba(255,214,138,0.10), rgba(138,198,255,0.06));
 }
 
 .about__content {
@@ -287,9 +254,8 @@ img {
 }
 
 .about__photo {
-  height: 280px;
+  height: 260px;
   object-fit: contain;
-  border-radius: 8px;
 }
 
 /* ================================
@@ -297,26 +263,28 @@ img {
 ================================ */
 .contact {
   padding: var(--space-lg) 0;
-  background: linear-gradient(180deg, rgba(255,126,182,0.10), transparent);
 }
 
 .footer {
-  padding: var(--space) 0;
+  padding: var(--space);
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 /* ================================
-   Utilities & Effects
+   Utilities
 ================================ */
 .center { text-align: center; }
 .muted { color: var(--muted); }
 
+/* ================================
+   Grain Overlay
+================================ */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: radial-gradient(rgba(0,0,0,0.035) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
   background-size: 18px 18px;
   pointer-events: none;
   z-index: -1;
