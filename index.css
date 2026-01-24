@@ -150,22 +150,15 @@ img { max-width:100%; display:block; }
   display:flex;
   gap: 1rem;
   align-items:center;
-  
 
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
+  touch-action: pan-x;
+
   max-width: 100%;
-  
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 8%,
-    black 92%,
-    transparent
-  );
 }
+
 
 .nav__link {
   padding: 0.4rem 0.6rem;
