@@ -180,16 +180,17 @@
 
           <article class="work__box work__box--featured">
             <div class="work__text">
-              <p class="project-eyebrow">Current university project <span>•</span> Semester 1</p>
+              <p class="project-eyebrow">Current university project</p>
               <h3>Marching Planets</h3>
               <p class="project-lede">
-                An ongoing 3D game MVP developed by a 10-person multidisciplinary team in a virtual studio. I pitched
-                the concept and lead the team as Project Leader, with a hands-on focus on procedural planet systems.
+                I’m the team leader on this 10-person Unity project. I pitched the game and have taken on a substantial
+                amount of hands-on programming, building the planet, mech, and enemy systems and helping connect them
+                into the gameplay flow.
               </p>
 
               <div class="project-facts" aria-label="Project details">
                 <span><strong>Team</strong> 10 people</span>
-                <span><strong>Role</strong> Project Leader · Planet Lead</span>
+                <span><strong>Role</strong> Team Leader</span>
                 <span><strong>Cycle</strong> 10-week Agile cycle</span>
                 <span><strong>Tech</strong> Unity · C#</span>
                 <span><strong>Tools</strong> Jira · GitHub · Miro</span>
@@ -197,49 +198,47 @@
 
               <div class="project-detail-grid">
                 <section>
-                  <h4>My contribution</h4>
+                  <h4>Planet systems</h4>
                   <ul>
-                    <li>Pitched the game and helped shape a shared direction for the team.</li>
-                    <li>Developed procedural planet generation using the Marching Cubes algorithm.</li>
-                    <li>Implemented mech movement and attachment systems, plus enemy behaviour and spawning.</li>
-                    <li>Led the cross-discipline team across programming, design, and art, and supported work beyond my main area when needed.</li>
+                    <li>I built procedural terrain from noise and density data, using chunked Marching Cubes meshes, planet settings, and layers.</li>
+                    <li>I also worked on collision, surface protection, object scatter, and seeded ore deposits.</li>
+                    <li>I helped move mesh generation toward Unity Jobs and NativeArrays, and connected drilling to chunk updates and ore gathering.</li>
                   </ul>
                 </section>
 
                 <section>
-                  <h4>Team design direction</h4>
-                  <p>
-                    The planned loop combines planetary exploration, resource gathering, mech upgrades, a supporting base,
-                    and enemy defence. The boards explore arctic, forest, and desert worlds, plus hazards, mech modules,
-                    base structures, enemy types, and an early science-fiction setting.
-                  </p>
-                  <p class="project-note">These are design concepts; they are not all confirmed features of the prototype.</p>
+                  <h4>Mech gameplay</h4>
+                  <ul>
+                    <li>I worked on mech movement, state-based behaviour, interactions, and attachments such as drills and guns.</li>
+                    <li>I connected drilling to resource collection and inventory, including tracking gathered amounts against resource thresholds.</li>
+                    <li>I added targeting and drill feedback, and integrated mech features with the game manager and other gameplay systems.</li>
+                  </ul>
+                </section>
+
+                <section>
+                  <h4>Enemies and waves</h4>
+                  <ul>
+                    <li>I worked on enemy behaviour, target detection, pursuit, and navigation across spherical planets.</li>
+                    <li>I also worked on staged waves, grouped spawning, enemy coordination, and pooling.</li>
+                    <li>I connected enemy navigation and spawning to the defence of the settlement and its dome.</li>
+                  </ul>
+                </section>
+
+                <section>
+                  <h4>Leadership and integration</h4>
+                  <ul>
+                    <li>I pitched the concept and led a 10-person team across programming, design, and art.</li>
+                    <li>I helped bring gameplay systems together, including game startup, manager initialization, and phase structure.</li>
+                    <li>I supported other departments alongside my hands-on programming.</li>
+                  </ul>
                 </section>
               </div>
 
-              <details class="case project-evidence">
-                <summary>Wider project codebase</summary>
-                <p>
-                  The wider Unity codebase also contains planet mesh, collision, and navigation work; mech movement and
-                  attachment systems; resource, inventory, recipe, and shop systems; and NPC, enemy, and spawning code.
-                  This describes the team repository’s technical scope and does not imply that I authored every system
-                  or that each one is complete in the current build.
-                </p>
-              </details>
-
-              <details class="case project-evidence">
-                <summary>Team process</summary>
-                <p>
-                  Sprint retrospectives recorded coordination challenges around communication, progress updates, design
-                  information, dependencies, and task allocation. They also noted positive progress as the exploration
-                    prototype took shape and mech work advanced. We used Jira to track work, GitHub for shared
-                    development, and Miro for planning and design discussion.
-                </p>
-              </details>
             </div>
 
-            <div class="work__image-box project-art">
-              <img class="project-art__image" src="./images/MarchingPlanets.png" alt="Procedurally generated planets from Marching Planets" loading="lazy" />
+            <div class="work__image-box project-video-box">
+              <iframe class="project-video" src="https://www.youtube-nocookie.com/embed/d4DpZHuHzEg" title="Marching Planets sprint prototype" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <a class="project-video-link" href="https://youtu.be/d4DpZHuHzEg" target="_blank" rel="noopener noreferrer">Watch the sprint prototype on YouTube <span aria-hidden="true">↗</span></a>
             </div>
           </article>
 
@@ -304,57 +303,6 @@
             </div>
           </div>
           
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Rocket Jumper</h3>
-              <p>
-                Rocket Jumper is a completed and published 2D physics-based platformer focused on precise movement,
-                fuel management, and level progression.
-              </p>
-
-              <p class="muted">Role: Solo Developer • Engine: Unity • Language: C# • Time: 4 months</p>
-
-              <h4>Key Systems</h4>
-              <ul>
-                <li>Rigidbody-based rocket movement controller</li>
-                <li>Level progression and checkpoint systems</li>
-                <li>Menu, audio, and game state management</li>
-              </ul>
-
-              <details class="case">
-                <summary>Technical Breakdown</summary>
-
-                <h4>Goal</h4>
-                <p>Create my first fully completed game and publish it on Itch.io.</p>
-
-                <h4>Approach</h4>
-                <ul>
-                  <li>Developed a force-driven movement system using Unity physics</li>
-                  <li>Implemented level flow, fuel management, and failure states</li>
-                  <li>Handled menus, audio, and player feedback</li>
-                </ul>
-
-                <h4>Outcome</h4>
-                <p>
-                  Successfully released on Itch.io, gaining experience with polish, iteration, and the release pipeline.
-                </p>
-
-                <h4>Reflection</h4>
-                <p>
-                  This project taught me the process of polishing and publishing a game, as well as balancing gameplay and design decisions.
-                </p>
-              </details>
-
-              <p class="muted" style="margin-top:.6rem;">
-                <a href="https://github.com/Clawedatom/rocketjumper" target="_blank" rel="noopener noreferrer">Source on GitHub</a> •
-                <a href="https://zelldauron.itch.io/rocketjumper" target="_blank" rel="noopener noreferrer">Play on Itch.io</a>
-              </p>
-            </div>
-
-            <div class="work__image-box">
-              <img src="./images/rocketJumperGame.png" class="work__image" alt="Rocket Jumper gameplay screenshot" loading="lazy" />
-            </div>
-          </div>
 
          <div class="work__box">
             <div class="work__text">
@@ -421,57 +369,6 @@
 
 
           
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Greedy Little Goblins</h3>
-              <p>
-                A fast-paced game jam project where the player uses shrink and grow mechanics to steal treasure from humans.
-                Built under strict time constraints with a focus on clean gameplay architecture.
-              </p>
-
-              <p class="muted">Role: Co-host and Developer • Engine: Unity • Language: C# • Time: Game Jam</p>
-
-              <h4>Key Systems</h4>
-              <ul>
-                <li>State-driven player controller</li>
-                <li>Enemy AI and detection logic</li>
-                <li>Game loop systems and level flow</li>
-              </ul>
-
-              <details class="case">
-                <summary>Technical Breakdown</summary>
-
-                <h4>Goal</h4>
-                <p>Create a complete and enjoyable game for a themed game jam.</p>
-
-                <h4>Approach</h4>
-                <ul>
-                  <li>Implemented a state-driven character with shrink and grow mechanics</li>
-                  <li>Rapid prototyping and iteration based on playtesting</li>
-                  <li>Delivered a stable, playable build within the jam timeframe</li>
-                </ul>
-
-                <h4>Outcome</h4>
-                <p>
-                  Completed and published on Itch.io, strengthening skills in scope control and rapid iteration.
-                </p>
-
-                <h4>Reflection</h4>
-                <p>
-                  During the development of Greedy Little Goblins, I learned how to scope a game effectively and that trimming features is a necessary part of working within time constraints.
-                </p>
-              </details>
-
-              <p class="muted" style="margin-top:.6rem;">
-                <a href="https://github.com/Clawedatom/GreedyLittleGoblin" target="_blank" rel="noopener noreferrer">View on GitHub</a> •
-                <a href="https://zelldauron.itch.io/greedy-little-goblins" target="_blank" rel="noopener noreferrer">Play on Itch.io</a>
-              </p>
-            </div>
-
-            <div class="work__image-box">
-              <img src="./images/GLG_JamImage.png" class="work__image" alt="Greedy Little Goblin gameplay screenshot" loading="lazy" />
-            </div>
-          </div>
 
           <div class="work__box">
             <div class="work__text">

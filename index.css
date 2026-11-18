@@ -8,7 +8,6 @@
 
   --accent: #ff7eb6;
   --accent-2: #7db9ff;
-  --accent-3: #ffd68a;
 
   --shadow: rgba(0,0,0,0.45);
   --glass: rgba(22,27,34,0.85);
@@ -240,6 +239,8 @@ img { max-width:100%; display:block; }
 }
 
 .project-eyebrow {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
   color: var(--accent-2) !important;
   font-size: 0.78rem !important;
   font-weight: 700;
@@ -247,8 +248,10 @@ img { max-width:100%; display:block; }
   line-height: 1.5;
   margin-bottom: 0.45rem !important;
   text-transform: uppercase;
+  background: rgba(125,185,255,0.1);
+  border: 1px solid rgba(125,185,255,0.2);
+  border-radius: 999px;
 }
-.project-eyebrow span { color: var(--accent); padding: 0 0.25rem; }
 .project-lede { max-width: 75ch; font-size: 1.04rem !important; }
 
 .project-facts {
@@ -296,7 +299,6 @@ img { max-width:100%; display:block; }
 }
 .project-detail-grid ul { padding-left: 1.15rem; }
 .project-detail-grid li + li { margin-top: 0.35rem; }
-.project-detail-grid .project-note { margin-top: 0.65rem; color: var(--accent-3); }
 .project-evidence {
   margin-top: 0.85rem;
   padding: 0.85rem 1rem;
@@ -306,24 +308,38 @@ img { max-width:100%; display:block; }
 }
 .project-evidence summary { cursor: pointer; font-size: 0.9rem; font-weight: 600; }
 .project-evidence p { margin-top: 0.7rem; }
-.project-tools-note { margin: 0.8rem 0 0 !important; font-size: 0.78rem !important; }
-
-.project-art {
-  position: relative;
+.project-video-box {
+  display: flex;
+  flex-direction: column;
   align-self: start;
+  gap: 0.65rem;
   width: 100%;
-  min-height: 270px;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-radius: 10px;
   padding: 0;
-  background: #111927;
+  background: transparent;
 }
-.project-art__image {
+.project-video {
+  display: block;
   width: 100%;
-  height: 100%;
-  min-height: 270px;
-  object-fit: cover;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 10px;
+  background: #090d13;
+}
+.project-video-link {
+  align-self: flex-start;
+  color: var(--accent-2);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.project-video-link:hover { text-decoration: underline; }
+.project-video-link span { margin-left: 0.2rem; }
+
+/* Keep embedded video crisp and responsive. */
+.project-video-box iframe {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .work__box.revealed {
